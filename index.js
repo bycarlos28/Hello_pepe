@@ -1,7 +1,7 @@
 
 const express = require('express')
 const app = express()
-const port = 3000;
+const PORT = process.env.PORT || 5000
 var body_parser = require('body-parser');
 
 app.use(body_parser.urlencoded({extended:false}))
@@ -17,6 +17,6 @@ app.post('/', (req, res) => {
 
 })
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+app.listen(PORT, () => {
+  console.log(`Example app listening at http://localhost:${PORT}`)
 })
